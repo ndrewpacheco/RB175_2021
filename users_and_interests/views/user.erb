@@ -1,0 +1,16 @@
+<h2><%= @name.upcase %></h2>
+
+<h3>Email:</h3>
+<p><%= info(@name)[:email] %></p>
+
+<h3>Interests:</h3>
+
+<p><%= info(@name)[:interests].join(', ') %></p>
+
+<ul>
+  <% @data.keys.each do |user| %>
+  <% next if user.to_s == @name %>
+  <li><a href="/<%= user %>"><%= user %></a></li>
+ <% end %>
+
+</ul>
