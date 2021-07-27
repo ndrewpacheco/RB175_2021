@@ -1,0 +1,12 @@
+GEM
+  specs:
+    webrick (1.6.0)
+
+PLATFORMS
+  x86_64-darwin-18
+
+DEPENDENCIES
+  webrick
+
+BUNDLED WITH
+   2.2.15
