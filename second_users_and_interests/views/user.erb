@@ -1,0 +1,16 @@
+<h1><%= @user[:name].capitalize %>'s Page</h1>
+<ul>
+  <li>Email: <%= @user[:email] %></li>
+  <li>Interests: <%= @user[:interests].join(", ") %></li>
+</ul>
+
+<h3>Links to other users: </h3>
+<ul>
+  <% @users.each do |user| %>
+    <% p username = user[0].to_s %>
+    <% p @user[:name] %>
+    <% next if username == @user[:name] %>
+    <li><a href="<%= username %>"><%= username %></a></li>
+<% end %>
+</ul>
+
